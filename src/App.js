@@ -4,6 +4,7 @@ import './App.css';
 
 class App extends Component {
   render() {
+    console.log(process.env);
     return (
       <div className="App">
         <header className="App-header">
@@ -13,6 +14,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <p>Message: {process.env.react_app_message}</p>
       </div>
     );
   }
