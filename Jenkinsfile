@@ -34,7 +34,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        withAWS(region: 'us-east-1', credentials: 'AKIAQ3X43URRGBIMEAXU') {
+        withAWS(region: 'us-east-1', credentials: 'tgalske-AWS-creds') {
           s3Upload(bucket: 'builds.thegc.cf', workingDir: '/var/jenkins_home/workspace/simple-react-app/build')
         }
       }
