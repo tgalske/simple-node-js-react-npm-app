@@ -12,6 +12,11 @@ pipeline {
   }
   stages {
 
+    stage('Config') {
+      load "$JENKINS_HOME/config.groovy"
+      echo "${env.react_app_message}"
+    }
+
     stage('Build') {
       steps {
         sh 'npm install'
